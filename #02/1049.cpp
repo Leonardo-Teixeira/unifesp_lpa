@@ -15,33 +15,32 @@ int main() {
 	if(strcmp(tipo1, "vertebrado") == 0){
 		if(strcmp(tipo2, "ave") == 0){
 			if(strcmp(tipo3, "onivoro") == 0){
-				printf("pomba");
+				printf("pomba\n");
 			}else{ // carnivoro
-				printf("aguia");
+				printf("aguia\n");
 			}
 		}else{ // mamifero
 			if(strcmp(tipo3, "onivoro") == 0){
-				printf("homem");
+				printf("homem\n");
 			}else{ // herbivoro
-				printf("vaca");
+				printf("vaca\n");
 			}
 		}
 	} else { // invertebrado
 		if(strcmp(tipo2, "inseto") == 0){
 			if(strcmp(tipo3, "hematofago") == 0){
-				printf("pulga");
+				printf("pulga\n");
 			}else{ // herbivoro
-				printf("lagarta");
+				printf("lagarta\n");
 			}
 		}else{ // anelideo
 			if(strcmp(tipo3, "hematofago") == 0){
-				printf("sanguessuga");
+				printf("sanguessuga\n");
 			}else{ // onivoro
-				printf("minhoca");
+				printf("minhoca\n");
 			}
 		}
 	}
-
 	
 	return 0;
 }

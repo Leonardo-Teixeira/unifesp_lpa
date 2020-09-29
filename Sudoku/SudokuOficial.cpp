@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 int main() {
-  int instancias, i, j, k, somaTot = 285, cont = 0;
+  
+  int instancias, i, j, aux, cont;
+  int somaTot = 285;
   int sudoku[9][9];
   int ok = 2;
-
+  cont = 0;
+  
+  
   scanf("%d", &instancias);
   while(instancias--) {
     for(i = 0; i <= 8; i++)
@@ -20,11 +23,11 @@ int main() {
 
         for (i = 0; i <= 8; i++) {
           for (j = 0; j <= 8; j++) {
-            k = sudoku[i][j];
-            k *= k;
-            linha[i] += k;
-            coluna[j] += k;
-            bloco[i/3][j/3] += k;
+            aux = sudoku[i][j];
+            aux *= aux;
+            linha[i] += aux;
+            coluna[j] += aux;
+            bloco[i/3][j/3] += aux;
 
             if (i == 8 && coluna[j] != somaTot)
               break;
@@ -47,8 +50,10 @@ int main() {
         printf("Instancia %d\n", cont);
         if(ok == 0){
           printf("NAO\n");
+          printf("\n");
         }else{
           printf("SIM\n");
+          printf("\n");
         }
         
 
